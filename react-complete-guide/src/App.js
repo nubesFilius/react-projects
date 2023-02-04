@@ -1,10 +1,11 @@
 import logo from './logo.svg';
+import ExpenseItem from './components/ExpenseItem';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h2> Let's get started </h2>
+      <ExpenseItem></ExpenseItem>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
