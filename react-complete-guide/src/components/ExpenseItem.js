@@ -2,12 +2,16 @@ import './ExpenseItem.css';
 
 // Convention is to repeat file name
 function ExpenseItem() {
+  const expenseDate = new Date(2023, 1, 4);
+  const expenseTitle = 'Car Insurance';
+  const expenseAmount = 130.0;
+
   return (
     <div className="expense-item">
-      <div>February 3rd 2023</div>
+      <div>{expenseDate.toISOString()}</div>
       <div className="expense-item__description">
-        <h2>Car Insurance</h2>
-        <div className="expense-item__price">$160</div>
+        <h2>{expenseTitle}</h2>
+        <div className="expense-item__price">${expenseAmount}</div>
       </div>
     </div>
   );
