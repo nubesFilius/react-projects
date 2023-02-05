@@ -18,8 +18,22 @@ function ExpenseForm() {
     setEnteredDate(event.target.value);
   }
 
+  function submitHandler(event) {
+    // By defautl submit buttons send HTTP request to server and page refreshes
+    // This javascript code prevent that behaviour
+    event.preventDefault();
+
+    const expenseData = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate),
+    };
+
+    console.log(expenseData);
+  }
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
